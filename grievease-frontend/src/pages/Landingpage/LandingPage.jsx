@@ -1,21 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "./components/NavBar";
 import PortalIcon from "../../assets/Rectangle 20.png";
 import TrackingIcon from "../../assets/Rectangle 21.png";
 import CommunityIcon from "../../assets/Rectangle 22.png";
 import loginbg from "../../assets/loginbg.png";
+import LoginForm from "./components/LoginForm";
+import SignupForm from "./components/SignupForm";
 
 const LandingPage = () => {
+  const [formType, setFormType] = useState(null);
+
   return (
-    <div className="w-screen h-screen p-20">
-      <NavBar />
-      <div className="fixed top-0 right-0 translate-x-12 z-[-1]" data-svg-wrapper>
+    <div className="w-screen min-h-screen px-4 sm:px-8 md:px-16 lg:px-32 py-6 sm:py-12 overflow-hidden relative">
+      <NavBar setFormType={setFormType} />
+      
+      {/* Background Elements */}
+      <div
+        className="fixed top-0 right-0 translate-x-12 z-[-1] hidden lg:block"
+        data-svg-wrapper
+      >
         <svg
           width="724"
           height="575"
           viewBox="0 0 764 625"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[724px]"
         >
           <path
             d="M846 227C846 446.809 656.616 625 423 625C189.384 625 0 446.809 0 227C0 7.19054 189.384 -171 423 -171C656.616 -171 846 7.19054 846 227Z"
@@ -23,49 +33,68 @@ const LandingPage = () => {
           />
         </svg>
       </div>
-      <div class=" fixed right-0 bottom-4 z-[-2] w-3/5 h-auto aspect-square bg-[#f2f2ff] rounded-full"></div>
-      <div className="flex mt-16">
-        <div
-          className="w-1/2 p-20 items-center justify-center">
-          <ul className="space-y-3 mb-16">
-            <li className=" text-xl font-bold text-gray-600">
+      <div className="fixed right-0 bottom-4 z-[-2] w-3/5 sm:w-2/5 md:w-3/5 h-auto aspect-square bg-[#f2f2ff] rounded-full"></div>
+
+      {/* Main Content */}
+      <div className="flex flex-col lg:flex-row mt-4 px-2">
+        {/* Left Section */}
+        <div className="w-full lg:w-1/2 p-4 sm:p-8 md:p-12 lg:p-20 flex flex-col items-center lg:items-start justify-center">
+          <ul className="space-y-3 mb-8 sm:mb-12 lg:mb-16">
+            <li className="text-lg sm:text-xl font-bold text-gray-600 flex items-center">
               <img
                 src={PortalIcon}
                 alt="Portal Icon"
-                className="inline-block w-10 h-10 mr-2"
+                className="w-8 h-8 sm:w-10 sm:h-10 mr-2"
               />
               Easy to use grievance portal
             </li>
-            <li className=" text-xl font-bold text-gray-600">
+            <li className="text-lg sm:text-xl font-bold text-gray-600 flex items-center">
               <img
                 src={TrackingIcon}
                 alt="Tracking Icon"
-                className="inline-block w-10 h-10 mr-2"
+                className="w-8 h-8 sm:w-10 sm:h-10 mr-2"
               />
               Real-time tracking of grievances
             </li>
-            <li className=" text-xl font-bold text-gray-600">
+            <li className="text-lg sm:text-xl font-bold text-gray-600 flex items-center">
               <img
                 src={CommunityIcon}
                 alt="Community Icon"
-                className="inline-block w-10 h-10 mr-2"
+                className="w-8 h-8 sm:w-10 sm:h-10 mr-2"
               />
               Community interactions
             </li>
           </ul>
-          <div className="space-x-4">
-            <button className="bg-[#2e91e2] rounded-2xl w-[200px] h-auto py-3 text-center text-white text-lg font-medium font-['Poppins']">
-             About us
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
+            <button className="bg-[#2e91e2] rounded-2xl w-full sm:w-[200px] py-3 text-center text-white text-base sm:text-lg font-medium font-['Poppins'] hover:bg-[#1a75c2] transition duration-200">
+              About us
             </button>
-            <button className="bg-[#9866EB] rounded-2xl w-[200px] h-auto py-3 text-center text-white text-lg font-medium font-['Poppins']">
+            <button
+              onClick={() => setFormType("signup")}
+              className="bg-[#9866EB] rounded-2xl w-full sm:w-[200px] py-3 text-center text-white text-base sm:text-lg font-medium font-['Poppins'] hover:bg-[#7f52c9] transition duration-200"
+            >
               Sign up
             </button>
-
           </div>
         </div>
-        <div className="w-1/2  flex justify-center">
-          <img src={loginbg}
-           alt="" />
+
+        {/* Right Section */}
+        <div className="w-full lg:w-1/2 flex justify-center relative overflow-hidden mt-8 lg:mt-0">
+      <div
+            className={`w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out ${formType ? "-translate-x-full" : "translate-x-0"}`}
+          >
+            <img src={loginbg} alt="Login Background" className="w-full h-auto" />
+          </div>
+          <div
+            className={`absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out ${formType === "login" ? "translate-x-0" : "translate-x-full"}`}
+          >
+            <LoginForm />
+          </div>
+          <div
+            className={`absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out ${formType === "signup" ? "translate-x-0" : "translate-x-full"}`}
+          >
+            <SignupForm />
+          </div>
         </div>
       </div>
     </div>
