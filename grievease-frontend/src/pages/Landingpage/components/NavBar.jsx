@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 const NavBar = ({ setFormType }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -50,13 +50,13 @@ const NavBar = ({ setFormType }) => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex w-full justify-end pr-16">
           {buttons.map((button, index) => (
-            <a
-              key={index}
-              href={button.link}
-              className="px-3 h-5 text-right text-[#171A31] text-xl   hover:text-[#2e91e2] transition duration-200"
-            >
-              {button.name}
-            </a>
+           <Link
+           key={index}
+           to={button.link}
+           className="px-3 h-5 text-right text-[#171A31] text-xl hover:text-[#2e91e2] transition duration-200"
+         >
+           {button.name}
+         </Link>
           ))}
         </div>
 
@@ -72,14 +72,13 @@ const NavBar = ({ setFormType }) => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center gap-8 z-40">
             {buttons.map((button, index) => (
-              <a
-                key={index}
-                href={button.link}
-                className="text-[#171A31] text-xl font-medium font-['Poppins'] hover:text-[#2e91e2] transition duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {button.name}
-              </a>
+             <Link
+             key={index}
+             to={button.link}
+             className="px-3 h-5 text-right text-[#171A31] text-xl hover:text-[#2e91e2] transition duration-200"
+           >
+             {button.name}
+           </Link>
             ))}
             <button
               onClick={() => {

@@ -1,9 +1,13 @@
 import React from "react";
 
 const LoginForm = () => {
-  const handleLogin = () => {
-    // Login functionality would be implemented here
-    console.log("Login button clicked");
+const handleLogin = () => {
+    // Store a demo token in local storage
+    localStorage.setItem('token', 'demo-token');
+    console.log("Login button clicked, token stored");
+    // Redirect to the dashboard
+    window.location.href = "/grievances";
+
   };
 
   return (

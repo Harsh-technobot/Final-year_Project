@@ -2,6 +2,12 @@
 import React from "react";
 
 function SignupForm() {
+  const handleSignup = () => {
+    // Store a demo token in local storage
+    localStorage.setItem('token', 'demo-token');
+    console.log("Signup button clicked, token stored");
+  };
+
   return (
     <div className="max-w-[411px]">
       <section className="flex flex-col px-10 pt-6 pb-3.5 w-full bg-slate-50 rounded-[40px] shadow-[0px_25px_40px_rgba(0,0,0,0.1)]">
@@ -65,7 +71,11 @@ function SignupForm() {
         </div>
 
         <div className="flex justify-center mt-8">
-          <button className="gap-2.5 px-20 py-3.5 mt-8 max-w-full text-base font-semibold text-white whitespace-nowrap bg-blue-500 rounded-3xl min-h-[46px] w-[231px]">
+          <button
+            onClick={handleSignup}
+            className="gap-2.5 px-20 py-3.5 mt-8 max-w-full text-base font-semibold text-white whitespace-nowrap bg-blue-500 rounded-3xl min-h-[46px] w-[231px]"
+          >
+
             Signup
           </button>
         </div>

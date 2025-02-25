@@ -11,7 +11,7 @@ const LandingPage = () => {
   const [formType, setFormType] = useState(null);
 
   return (
-    <div className="w-screen min-h-screen px-4 sm:px-8 md:px-16 lg:px-32 py-6 sm:py-12 overflow-hidden relative">
+    <div className="w-screen h-screen px-4 sm:px-8 md:px-16 lg:px-32 py-6 sm:py-12 lg:overflow-hidden overflow-auto relative">
       <NavBar setFormType={setFormType} />
       
       {/* Background Elements */}
