@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../components/Logo";
-import { FaRegBell } from "react-icons/fa6";
+import { FaCircleInfo, FaRegBell } from "react-icons/fa6";
+import { FcInfo, FcList, FcPlus } from "react-icons/fc";
 
 const Grievanceshomepage = () => {
   const [category, setCategory] = useState("");
@@ -57,15 +58,15 @@ const Grievanceshomepage = () => {
         </div>
       </nav>
 
-      <div className="flex justify-around p-4">
-        <button className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">
-          About us
+      <div className="flex justify-center gap-[22px] py-[10px]">
+        <button className="px-4 py-2 flex items-center space-x-4 shadow-sm shadow-fuchsia-400/20 bg-white text-[#4B5563] rounded-[11px] hover:scale-110 hover:shadow-purple-300/40 hover:shadow-xl transition-transform">
+        <FcInfo/> <span>About us</span>
         </button>
-        <button className="px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600">
-          New grievance
+        <button className="px-4 py-2 flex items-center space-x-4 shadow-sm shadow-fuchsia-400/20 bg-white text-[#4B5563] rounded-[11px] hover:scale-110 hover:shadow-purple-300/40 hover:shadow-lg transition-transform">
+        <FcPlus/> <span>New Grievance</span>
         </button>
-        <button className="px-4 py-2 bg-gray-500 text-white rounded-full hover:bg-gray-600">
-          Your grievances
+        <button className="px-4 py-2 flex items-center space-x-4 shadow-sm shadow-fuchsia-400/20 bg-white text-[#4B5563] rounded-[11px] hover:scale-110 hover:shadow-purple-300/40 hover:shadow-lg transition-transform">
+        <FcList/> <span>Your Grievances</span>
         </button>
       </div>
 
