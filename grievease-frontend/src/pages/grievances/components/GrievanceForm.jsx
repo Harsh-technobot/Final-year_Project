@@ -23,14 +23,14 @@ const GrievanceForm = () => {
   };
 
   return (
-    <div className="max-w-mx-auto p-8 bg-white rounded-3xl shadow-sm">
-      <h2 className="text-2xl font-bold mb-4 text-black/80">
+    <div className="max-w-mx-auto lg:p-8 p-3 bg-white rounded-3xl shadow-sm">
+      <h2 className="text-2xl font-semibold mb-4 text-black/80">
         Register New Grievance
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="mb-4 flex justify-center items-center">
           <label
-            className="flex justify-center border-dashed border-black/40 border-[1.5px] my-6 rounded-2xl py-12 w-full lg:w-1/2 "
+            className="flex justify-center border-dashed border-black/40 border-[1.5px] my-3 rounded-2xl py-8 w-full lg:w-1/2 "
             htmlFor="file-upload"
           >
             <div className="flex flex-col items-center gap-3 relative">

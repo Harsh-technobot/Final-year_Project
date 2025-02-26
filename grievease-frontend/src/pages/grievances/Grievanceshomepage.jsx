@@ -6,13 +6,14 @@ import Footer from "./components/Footer";
 
 const Grievanceshomepage = () => {
   return (
-    <div className="min-h-screen bg-gray-100 font-sans">
+    <div className="h-screen w-screen overflow-x-clip overflow-auto bg-gray-100 font-sans">
       <Navbar notifications={3} />
-     <div className="w-screen px-24">
+     <div className="w-full lg:px-24 px-3">
      <ActionButtons />
-      <GrievanceForm />
-      <Footer />
+     <GrievanceForm />
+     
      </div>
+     <Footer />
     </div>
   );
 };
