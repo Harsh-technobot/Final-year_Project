@@ -1,17 +1,24 @@
 import React from "react";
 
 const Footer = () => {
-  return (
-    <footer className="border-t border-gray-200 p-4 text-center">
-      <h1 className="text-2xl font-bold mb-2">GRIEVEASE</h1>
-      <div className="space-x-4">
-        <a href="/about" className="text-gray-600 hover:underline">About</a>
-        <a href="/privacy" className="text-gray-600 hover:underline">Privacy Policy</a>
-        <a href="/terms" className="text-gray-600 hover:underline">Terms of Service</a>
-        <a href="/contact" className="text-gray-600 hover:underline">Contact</a>
-      </div>
+return (
+    <footer className="relative w-full  h-7 top-8 left-0 border-0 border-none">
+        <div className="w-full bg-white h-[92px] border-0 border-none lg:flex items-center justify-between px-4">
+            <div className="flex items-center gap-2.5">
+                <p className="font-normal text-white text-4xl">
+                    <span className="text-black">Griev</span>
+                    <span className="font-bold text-black">ease</span>
+                </p>
+            </div>
+            <div className="lg:flex gap-4">
+                <div className="font-normal text-gray-600 text-base">About</div>
+                <div className="font-normal text-gray-600 text-base">Privacy Policy</div>
+                <div className="font-normal text-gray-600 text-base">Terms of Service</div>
+                <div className="font-normal text-gray-600 text-base">Contact</div>
+            </div>
+        </div>
     </footer>
-  );
+);
 };
 
 export default Footer;
