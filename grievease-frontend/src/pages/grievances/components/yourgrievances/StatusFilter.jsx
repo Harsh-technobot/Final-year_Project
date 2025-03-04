@@ -25,9 +25,10 @@ function StatusFilter({ filters, onFilterChange }) {
           type="checkbox"
           id="registered"
           checked={filters.registered}
+          className="w-5 h-5 rounded-2xl"
           onChange={handleCheckboxChange}
         />
-        <label htmlFor="registered">Registered</label>
+          <label className="rounded-md bg-[#A5D7FF47] text-[#2E91E2] px-2 " htmlFor="registered">Registered</label>
       </div>
 
       <div className="flex gap-1 items-center">
@@ -35,9 +36,10 @@ function StatusFilter({ filters, onFilterChange }) {
           type="checkbox"
           id="in-progress"
           checked={filters.inProgress}
+          className="w-5 h-5 rounded-2xl"
           onChange={handleCheckboxChange}
         />
-        <label htmlFor="in-progress">In Progress</label>
+        <label className="bg-[#FEF9C3] text-[#854D0E] rounded-md px-2" htmlFor="in-progress">In Progress</label>
       </div>
 
       <div className="flex gap-1 items-center">
@@ -45,9 +47,10 @@ function StatusFilter({ filters, onFilterChange }) {
           type="checkbox"
           id="resolved"
           checked={filters.resolved}
+          className="w-5 h-5 rounded-2xl"
           onChange={handleCheckboxChange}
         />
-        <label htmlFor="resolved">Resolved</label>
+        <label  className="bg-[#DCFCE7] text-[#166534] rounded-md px-2" htmlFor="resolved">Resolved</label>
       </div>
     </div>
   );
