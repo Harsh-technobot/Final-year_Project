@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import uploadicon from "../../../assets/IconFrame.svg";
+import uploadicon from "../../../assets/Iconframe.svg";
 
 const GrievanceForm = () => {
   const [category, setCategory] = useState("");
