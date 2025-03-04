@@ -11,7 +11,7 @@ const LandingPage = () => {
   const [formType, setFormType] = useState(null);
 
   return (
-    <div className="w-screen h-screen px-4 sm:px-8 md:px-16 lg:px-32 py-6 sm:py-12 lg:overflow-hidden overflow-auto relative">
+    <div className="w-screen h-screen px-4 sm:px-8 md:px-16 lg:px-20 py-6 sm:py-12 lg:overflow-hidden overflow-auto relative">
       <NavBar setFormType={setFormType} />
       
       {/* Background Elements */}
@@ -36,7 +36,7 @@ const LandingPage = () => {
       <div className="fixed right-0 bottom-4 z-[-2] w-3/5 sm:w-2/5 md:w-3/5 h-auto aspect-square bg-[#f2f2ff] rounded-full"></div>
 
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row mt-4 px-2">
+      <div className="flex flex-col lg:flex-row mt-12 px-2">
         {/* Left Section */}
         <div className="w-full lg:w-1/2 p-4 sm:p-8 md:p-12 lg:p-20 flex flex-col items-center lg:items-start justify-center">
           <ul className="space-y-3 mb-8 sm:mb-12 lg:mb-16">
@@ -79,11 +79,11 @@ const LandingPage = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-full lg:w-1/2 flex justify-center relative overflow-hidden mt-8 lg:mt-0">
+        <div className="w-full lg:w-1/2 flex justify-center relative overflow-hidden mt-6 lg:mt-0">
       <div
             className={`w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out ${formType ? "-translate-x-full" : "translate-x-0"}`}
           >
-            <img src={loginbg} alt="Login Background" className="w-full h-auto" />
+            <img src={loginbg} alt="Login Background" className="w-4/5 h-auto" />
           </div>
           <div
             className={`absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out ${formType === "login" ? "translate-x-0" : "translate-x-full"}`}

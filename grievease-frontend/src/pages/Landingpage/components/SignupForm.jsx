@@ -40,11 +40,11 @@ function SignupForm() {
           />
         </form>
 
-        <p className="self-start mt-16 ml-3 text-xs text-neutral-600">
+        <p className="self-start mt-12 ml-3 text-xs text-neutral-600">
           Or continue with
         </p>
 
-        <div className="flex gap-3.5 mt-8">
+        <div className="flex gap-3.5 mt-4">
           <button className="flex flex-col flex-1 justify-center items-center self-start px-5 py-2 rounded bg-neutral-100">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/cfcafbe513bd878d756538068b5730b6d1bf2f93dd48636fb88af698905f7da5?placeholderIfAbsent=true&apiKey=78edfb5432bb454ba45341ffa54eb21f"
@@ -70,7 +70,7 @@ function SignupForm() {
           </button>
         </div>
 
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-4">
           <button
             onClick={handleSignup}
             className="gap-2.5 px-20 py-3.5 mt-8 max-w-full text-base font-semibold text-white whitespace-nowrap bg-blue-500 rounded-3xl min-h-[46px] w-[231px]"
