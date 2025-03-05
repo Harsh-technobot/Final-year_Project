@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import ActionButtons from "./components/ActionButtons";
 import GrievanceForm from "./components/GrievanceForm";
 import Footer from "./components/Footer";
-import AboutUs from "./components/AboutUs";
 import GrievancesSection from "./components/yourgrievances/YourGrievances";
+import AboutUsInsight from "./components/AboutUsInsight";
 
 const Grievanceshomepage = () => {
   const [activeComponent, setActiveComponent] = useState("newGrievance"); // Default to New Grievance
@@ -50,7 +50,7 @@ const Grievanceshomepage = () => {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
             >
-              <AboutUs />
+              <AboutUsInsight/>
             </motion.div>
           )}
         </AnimatePresence>
