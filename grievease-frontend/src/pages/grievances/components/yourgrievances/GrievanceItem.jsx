@@ -20,12 +20,12 @@ function GrievanceItem({
     <>
       <article
         onClick={openModal}
-        className="flex flex-col gap-1 p-4 lg:mx-2 rounded-2xl border border-gray-300 border-solid cursor-pointer hover:shadow-md transition-shadow duration-300"
+        className="flex flex-col  gap-1 lg:p-4 p-2 lg:mx-2 rounded-2xl border border-gray-300 border-solid cursor-pointer hover:shadow-md transition-shadow duration-300"
       >
         <StatusBadge status={status} />
 
-        <h3 className="text-lg font-medium text-black">{title}</h3>
-        <p className="text-base text-gray-600">{location}</p>
+        <h3 className="lg:text-lg text-md font-medium text-black">{title}</h3>
+        <p className="lg:text-base text-sm text-gray-600">{location}</p>
 
         <time className="text-sm text-right text-gray-500">
           Submitted: {submissionDate}

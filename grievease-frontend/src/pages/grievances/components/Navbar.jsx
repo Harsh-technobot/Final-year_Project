@@ -9,7 +9,7 @@ const Navbar = ({ notifications }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="flex lg:px-16 px-2 justify-between items-center py-3 border-b bg-white border-gray-200">
+    <nav className="flex lg:px-16 px-2 justify-between items-center lg:py-3 py-2 border-b bg-white border-gray-200">
       <Logo />
 
       {/* Desktop Menu */}
@@ -87,7 +87,7 @@ const Navbar = ({ notifications }) => {
         <img
           src="https://play-lh.googleusercontent.com/LeX880ebGwSM8Ai_zukSE83vLsyUEUePcPVsMJr2p8H3TUYwNg-2J_dVMdaVhfv1cHg=w240-h480-rw"
           alt="Profile"
-          className="w-12 h-12 rounded-full"
+          className="lg:w-12 lg:h-12 h-10 w-10 rounded-full"
         />
       </div>
     </nav>

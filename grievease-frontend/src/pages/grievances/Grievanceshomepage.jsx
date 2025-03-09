@@ -13,7 +13,7 @@ const Grievanceshomepage = () => {
   return (
     <div className="h-screen w-screen overflow-x-clip overflow-auto bg-gray-100 font-sans">
       <Navbar notifications={3} />
-      <div className="w-full lg:px-24 px-3">
+      <div className="w-full lg:px-24 px-0">
         <ActionButtons setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
 
         {/* Animated Component Transitions */}
