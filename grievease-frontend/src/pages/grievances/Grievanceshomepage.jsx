@@ -1,63 +1,67 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Navbar from "./components/Navbar";
-import ActionButtons from "./components/ActionButtons";
-import GrievanceForm from "./components/GrievanceForm";
-import Footer from "./components/Footer";
 import GrievancesSection from "./components/yourgrievances/YourGrievances";
+import GrievanceForm from "./components/GrievanceForm";
+import ActionButtons from "./components/ActionButtons";
 import AboutUsInsight from "./components/AboutUsInsight";
+import StatsSection from "./components/StatSection";
 
-const Grievanceshomepage = () => {
-  const [activeComponent, setActiveComponent] = useState("newGrievance"); // Default to New Grievance
+const GrievanceScreen = () => {
+  const [activeComponent, setActiveComponent] = useState("newGrievance");
 
   return (
-    <div className="h-screen w-screen overflow-x-clip overflow-auto bg-gray-100 font-sans">
-      <Navbar notifications={3} />
-      <div className="w-full lg:px-24 px-0">
-        <ActionButtons setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
+    <motion.div
+      key="grievances"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.3 }}
+      className="w-full lg:px-24 px-0 py-4"
+    >
+      {/* Action Buttons (Only in Grievances) */}
+      <ActionButtons setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
 
-        {/* Animated Component Transitions */}
-        <AnimatePresence mode="wait">
-          {activeComponent === "newGrievance" && (
-            <motion.div
-              key="newGrievance"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-            >
-              <GrievanceForm />
-            </motion.div>
-          )}
+      {/* Show selected content */}
+      <AnimatePresence mode="wait">
+        {activeComponent === "newGrievance" && (
+          <motion.div
+            key="newGrievance"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+          >
+            <GrievanceForm />
+          </motion.div>
+        )}
 
-          {activeComponent === "yourGrievances" && (
-            <motion.div
-              key="yourGrievances"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-            >
-              <GrievancesSection />
-            </motion.div>
-          )}
-
-          {!activeComponent && (
-            <motion.div
-              key="aboutUs"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-            >
-              <AboutUsInsight/>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-      <Footer />
-    </div>
+        {activeComponent === "yourGrievances" && (
+          <motion.div
+            key="yourGrievances"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+          >
+            
+            <GrievancesSection />
+            <StatsSection/>
+          </motion.div>
+        )}
+        {activeComponent === "" && (
+          <motion.div
+            key="aboutus"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+          >
+            <AboutUsInsight/>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 
-export default Grievanceshomepage;
+export default GrievanceScreen;

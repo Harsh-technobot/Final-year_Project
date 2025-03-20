@@ -11,6 +11,7 @@ function SignupForm() {
   const handleSignup = async () => {
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
+     
       return;
     }
 
@@ -25,7 +26,7 @@ function SignupForm() {
 
       console.log("Signup successful:", response.data);
       localStorage.setItem("token", "demo-token");
-      navigate("/grievances");
+      navigate("/home");
     } catch (error) {
       console.error("Signup failed:", error);
     }

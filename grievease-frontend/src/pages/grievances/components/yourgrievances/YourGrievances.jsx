@@ -48,9 +48,6 @@ function GrievancesSection() {
     <div className=" ">
     <section className="lg:p-6 py-3 px-2 mb-6 bg-white rounded-xl shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
       <header className="flex justify-between lg:px-10 items-center mb-6 max-md:flex-col max-md:gap-4">
-        <h2 className="text-xl font-bold text-black/80">
-          Your Previous Grievances
-        </h2>
 
         <SearchBar
           placeholder="Search for title or description"
@@ -78,7 +75,7 @@ function GrievancesSection() {
       </div>
       
     </section>
-    <StatsSection/>
+   
     </div>
   );
 }

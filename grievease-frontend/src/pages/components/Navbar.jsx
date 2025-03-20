@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../components/Logo";
+import Logo from "./Logo";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import { FaRegBell } from "react-icons/fa6";
 
-const Navbar = ({ notifications }) => {
+const Navbar = ({ notifications, setActivePage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuClick = (page) => {
+    setActivePage(page);
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className="flex lg:px-16 px-2 justify-between items-center lg:py-3 py-2 border-b bg-white border-gray-200">
@@ -15,17 +20,17 @@ const Navbar = ({ notifications }) => {
       {/* Desktop Menu */}
       <div className="space-x-6 hidden md:flex">
         {[
-          { name: "Grievances", path: "/grievances" },
-          { name: "Community", path: "/community" },
-          { name: "Job Portal", path: "/job-portal" },
+          { name: "Grievances", page: "grievances" },
+          { name: "Community", page: "community" },
+          { name: "Job Portal", page: "jobPortal" },
         ].map((item, index) => (
-          <Link
+          <button
             key={index}
-            to={item.path}
+            onClick={() => handleMenuClick(item.page)}
             className="text-[#2E91E2] hover:text-blue-600 border-[1.5px] border-white rounded-2xl py-1 px-2 hover:border-blue-400 transition-transform font-medium text-lg"
           >
             {item.name}
-          </Link>
+          </button>
         ))}
       </div>
 
@@ -59,18 +64,17 @@ const Navbar = ({ notifications }) => {
           {/* Links */}
           <nav className="flex flex-col items-center gap-4">
             {[
-              { name: "Grievances", path: "/grievances" },
-              { name: "Community", path: "/community" },
-              { name: "Job Portal", path: "/job-portal" },
+              { name: "Grievances", page: "grievances" },
+              { name: "Community", page: "community" },
+              { name: "Job Portal", page: "jobPortal" },
             ].map((item, index) => (
-              <Link
+              <button
                 key={index}
-                to={item.path}
+                onClick={() => handleMenuClick(item.page)}
                 className="text-[#2E91E2] text-xl font-medium hover:text-blue-600 transition duration-200"
-                onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
-              </Link>
+              </button>
             ))}
           </nav>
         </motion.div>
