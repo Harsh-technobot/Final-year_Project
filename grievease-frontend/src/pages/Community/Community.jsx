@@ -3,6 +3,8 @@ import StatsDashboard from "./components/StatsDashboard";
 import GrievancesSection from "../grievances/components/yourgrievances/YourGrievances";
 import TopContributors from "./components/TopContributrs";
 import RecentActivityCard from "./components/RecentActivity";
+import PieChart3D from "./components/Piechart";
+import DonutChart3D from "./components/Piechart";
 
 const Community = () => {
   return (
@@ -23,6 +25,7 @@ const Community = () => {
           <RecentActivityCard />
         </div>
       </div>
+    <DonutChart3D/>
     </div>
   );
 };
