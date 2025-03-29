@@ -35,14 +35,7 @@ const Navbar = ({ notifications, setActivePage }) => {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="md:hidden">
-        <button
-          onClick={() => setIsMenuOpen(true)}
-          className="text-[#2E91E2] hover:text-blue-600 border-[1.5px] border-white rounded-2xl py-1 px-2 hover:border-blue-400 transition-transform font-medium text-lg"
-        >
-          Menu
-        </button>
-      </div>
+     
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
@@ -81,6 +74,7 @@ const Navbar = ({ notifications, setActivePage }) => {
       )}
 
       {/* Notifications & Profile */}
+      <div className="flex">
       <div className="flex items-center space-x-2">
         <div className="flex bg-[#E5E7EB] px-3 py-2 items-center space-x-1 rounded-xl">
           <FaRegBell className="hover:text-blue-500" />
@@ -94,6 +88,16 @@ const Navbar = ({ notifications, setActivePage }) => {
           className="lg:w-12 lg:h-12 h-10 w-10 rounded-full"
         />
       </div>
+      <div className="md:hidden">
+        <button
+          onClick={() => setIsMenuOpen(true)}
+          className="text-[#113756] text-2xl font-semibold text-right hover:text-blue-600 border-[1.5px] border-white rounded-2xl py-1 px-2 hover:cursor-pointer transition-transform "
+        >
+           {isMenuOpen ? "×" : "☰"}
+        </button>
+      </div>
+      </div>
+     
     </nav>
   );
 };

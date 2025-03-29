@@ -56,14 +56,20 @@ function StatsSection() {
   ];
 
   return (
-    <section className="flex gap-6 mb-10 max-md:flex-col">
+    <section className="flex gap-3 mx-12 sm:mx-8 mb-10 max-md:flex-wrap justify-center">
       {statsData.map((stat, index) => (
-        <StatCard
+        
+        <div
+            key={stat.title}
+            className={` flex sm:w-[45%]  md:w-[33%]  max-md:ml-0 max-sm:w-full`}
+          >
+          <StatCard
           key={index}
           icon={stat.icon}
           label={stat.label}
           value={stat.value}
         />
+        </div>
       ))}
     </section>
   );

@@ -25,7 +25,10 @@ const Community = () => {
           <RecentActivityCard />
         </div>
       </div>
+     <div className="bg-white rounded-lg px-6 py-3">
+     <h2 className="text-left text-2xl mb-6 font-semibold text-black/80">Category Distribution</h2>
     <DonutChart3D/>
+     </div>
     </div>
   );
 };

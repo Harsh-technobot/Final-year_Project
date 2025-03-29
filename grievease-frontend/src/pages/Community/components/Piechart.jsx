@@ -16,16 +16,16 @@ const DonutChart3D = () => {
 
     // Add data
     chart.data = [
-      { category: 'Water', value: 71 },
+      { category: 'Water', value: 61 },
       { category: 'Light', value: 49 },
       { category: 'Air', value: 48 },
       { category: 'Police', value: 34 },
       { category: 'Municipality', value: 26 },
-      { category: 'Law and Order', value: 13 },
+      { category: 'Law and Order', value: 23 },
     ];
 
     // Set inner radius to make it a donut chart
-    chart.innerRadius = am4core.percent(52    ); // Match the hole size in the image
+    chart.innerRadius = am4core.percent(50    ); // Match the hole size in the image
     chart.depth = 280; // Adjust depth for 3D effect
 
     // Configure the legend
@@ -43,6 +43,7 @@ const DonutChart3D = () => {
     series.dataFields.value = 'value';
     series.dataFields.depthValue = 'value';
     series.dataFields.category = 'category';
+    series.dataFields.radiusValue= 'value';
     series.slices.template.cornerRadius = 5;
     series.colors.step = 3;
 
@@ -101,7 +102,6 @@ const DonutChart3D = () => {
 
   return (
     <div>
-      <h2 style={{ textAlign: 'center' }}>3D Donut Chart</h2>
       <div id="chartdiv" style={{ width: '100%', height: '700px' }}></div>
     </div>
   );

@@ -11,7 +11,7 @@ const StatsDashboard = () => {
       changePercentage: "12%",
       iconSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/28285ec86512dada4644abfe9362719eb68b90f859c758b8186242d6d1bb5472?placeholderIfAbsent=true",
-      isPositiveChange: true,
+      isPositiveChange: false,
     },
     {
       title: "Resolution Rate",
@@ -33,13 +33,13 @@ const StatsDashboard = () => {
 
   return (
     <section className="self-center max-w-full ">
-      <div className="flex gap-2 max-md:flex-col">
+      <div className="flex gap-3 max-md:flex-wrap justify-center">
         {statsData.map((stat, index) => (
           <div
             key={stat.title}
-            className={`w-[33%] ${index > 0 ? "ml-5" : ""} max-md:ml-0 max-md:w-full`}
+            className={` flex sm:w-[47%] flex-wrap md:w-[33%]  max-md:ml-0 max-sm:w-full`}
           >
-            <StatCard
+            <StatCard 
               title={stat.title}
               value={stat.value}
               changePercentage={stat.changePercentage}
