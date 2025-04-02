@@ -4,6 +4,7 @@ import GrievanceScreen from "./grievances/Grievanceshomepage";
 import Community from "./Community/Community";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import JobPortal from "./JobPortal/JobPortal";
 
 const MainScreen = () => {
   const [activePage, setActivePage] = useState("grievances");
@@ -36,7 +37,7 @@ const MainScreen = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="p-6 text-center text-gray-700 text-lg">
-                Job Portal Content Goes Here!
+                <JobPortal/>
               </div>
             </motion.div>
           )}

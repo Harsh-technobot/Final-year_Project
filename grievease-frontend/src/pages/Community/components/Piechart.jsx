@@ -49,11 +49,11 @@ const DonutChart3D = () => {
 
     // Customize colors to match the image
     series.colors.list = [
-      am4core.color('#6B7280'), // Water (grayish)
-      am4core.color('#34D399'), // Light (green)
-      am4core.color('#FBBF24'), // Air (yellow)
-      am4core.color('#60A5FA'), // Police (light blue)
-      am4core.color('#A78BFA'), // Municipality (purple)
+      am4core.color('#7086FD'), // Water (grayish)
+      am4core.color('#6FD195'), // Light (green)
+      am4core.color('#FFAE4C'), // Air (yellow)
+      am4core.color('#07DBFA'), // Police (light blue)
+      am4core.color('#FFAE4C'), // Municipality (purple)
       am4core.color('#2563EB'), // Law and Order (dark blue)
     ];
 
