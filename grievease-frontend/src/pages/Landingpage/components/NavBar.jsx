@@ -28,13 +28,13 @@ const NavBar = ({ setFormType }) => {
 
   return (
     <div className="w-full">
-      <div className="flex justify-between items-center text-white p-4">
+      <div className="flex justify-between items-center text-white md:p-4 pt-1">
         {/* Logo */}
         <button className="text-center"  onClick={() => setFormType("")}>
-          <span className="text-black text-[40px] font-normal font-['Poppins']">
+          <span className="text-black md:text-[40px] text-[30px] font-normal font-['Poppins']">
             Griev
           </span>
-          <span className="text-black text-[40px] font-bold font-['Poppins']">
+          <span className="text-black md:text-[40px] text-[30px]  font-bold font-['Poppins']">
             ease
           </span>
         </button>
@@ -62,10 +62,10 @@ const NavBar = ({ setFormType }) => {
 
         {/* Login Button (Desktop) */}
         <button
-          onClick={() => setFormType("login")}
+          onClick={() => setFormType("signup")}
           className="hidden md:block bg-[#2e91e2] rounded-xl w-[130px] py-2 text-white text-lg font-medium font-['Poppins'] hover:bg-[#1a75c2] transition duration-200"
         >
-          Login
+          Sign up
         </button>
 
         {/* Mobile Menu */}
@@ -82,12 +82,12 @@ const NavBar = ({ setFormType }) => {
             ))}
             <button
               onClick={() => {
-                setFormType("login");
+                setFormType("signup");
                 setIsMenuOpen(false);
               }}
               className="bg-[#2e91e2] rounded-xl w-[130px] py-2 text-white text-lg font-medium font-['Poppins'] hover:bg-[#1a75c2] transition duration-200"
             >
-              Login
+              Signup
             </button>
           </div>
         )}

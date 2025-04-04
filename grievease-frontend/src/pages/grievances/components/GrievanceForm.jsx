@@ -23,8 +23,8 @@ const GrievanceForm = () => {
   };
 
   return (
-    <div className="max-w-mx-auto lg:p-8 p-3 bg-white rounded-3xl shadow-sm">
-      <h2 className="text-2xl font-semibold mb-4 text-black/80">
+    <div className="max-w-mx-auto lg:text-md text-sm lg:p-8 p-3 bg-white rounded-3xl shadow-sm">
+      <h2 className="lg:text-2xl text-lg font-semibold mb-4 text-black/80">
         Register New Grievance
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">

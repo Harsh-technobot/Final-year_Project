@@ -5,10 +5,10 @@ const Logo = () => {
   return (
     <button className="text-center" >
         <Link to="/">
-          <span className="text-black text-[30px] font-normal font-['Poppins']">
+          <span className="text-black text-[20px] md:text-[30px] lg:text-[40px] font-normal font-['Poppins']">
             GRIEV
           </span>
-          <span className="text-black text-[30px] font-bold font-['Poppins']">
+          <span className="text-black text-[20px] md:text-[30px] lg:text-[40px] font-bold font-['Poppins']">
             EASE
           </span>
           </Link>

@@ -3,7 +3,7 @@ import React from "react";
 
 const StatCard = ({ icon, label, value }) => {
   return (
-    <article className="flex flex-1 gap-4 items-center p-6 bg-white rounded-xl shadow-[0_1px_2px_rgba(0,0,0,0.05)] max-sm:flex-col max-sm:text-center">
+    <article className="flex  flex-1 gap-4 items-center p-6 bg-white rounded-xl shadow-[0_1px_2px_rgba(0,0,0,0.05)] max-sm:flex-col max-sm:text-center">
       <div className="flex justify-center items-center w-11 h-11 rounded-lg">
         <div dangerouslySetInnerHTML={{ __html: icon }} />
       </div>

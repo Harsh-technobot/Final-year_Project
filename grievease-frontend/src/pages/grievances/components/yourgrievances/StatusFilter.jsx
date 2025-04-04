@@ -19,7 +19,7 @@ function StatusFilter({ filters, onFilterChange }) {
   };
 
   return (
-    <div className="flex gap-3 max-sm:mt-4">
+    <div className="flex lg:text-md text-sm gap-3 max-sm:mt-4">
       <div className="flex gap-1 items-center">
         <input
           type="checkbox"

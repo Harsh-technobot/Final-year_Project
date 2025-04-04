@@ -2,7 +2,7 @@ import React from "react";
 
 function StatusBadge({ status }) {
   // Determine badge color based on status
-  let badgeClass = "px-2 py-1 text-xs rounded w-fit ";
+  let badgeClass = "px-2  py-1 text-xs rounded w-fit ";
 
   if (status === "in-progress") {
     badgeClass += "bg-blue-100 text-blue-800";

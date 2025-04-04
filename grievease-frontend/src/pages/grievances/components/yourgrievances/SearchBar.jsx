@@ -11,7 +11,7 @@ function SearchBar({ placeholder, onSearchChange }) {
       <input
         type="text"
         placeholder={placeholder}
-        className="p-2.5 w-full rounded-3xl border border-solid border-black border-opacity-20"
+        className="lg:p-2.5 p-1.5 w-full rounded-3xl border border-solid border-black border-opacity-20"
         onChange={handleInputChange}
       />
       <div className="absolute right-3 top-1/2 transform -translate-y-1/2">

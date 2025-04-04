@@ -11,7 +11,7 @@ const LoginForm = () => {
     localStorage.setItem('token', 'demo-token');
     console.log("Login button clicked, token stored");
     // Redirect to the dashboard
-    navigate("/grievances");
+    navigate("/home");
   };
 
   return (
