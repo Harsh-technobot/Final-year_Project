@@ -10,8 +10,8 @@ export const professionals = [
     reviews: 120,
     experience: "10+ years experience",
     services: [
-      { name: "Pipe Installation", rate: "$50/hr" },
-      { name: "Leak Repair", rate: "$30/hr" },
+      { name: "Pipe Installation", rate: "₹500/hr" },
+      { name: "Leak Repair", rate: "₹300/hr" },
     ],
     reviewList: [
       { user: "Alice", text: "Very professional and quick!" },
@@ -27,8 +27,8 @@ export const professionals = [
     reviews: 85,
     experience: "8+ years experience",
     services: [
-      { name: "Wiring", rate: "$45/hr" },
-      { name: "Appliance Installation", rate: "$35/hr" },
+      { name: "Wiring", rate: "₹405/hr" },
+      { name: "Appliance Installation", rate: "₹305/hr" },
     ],
     reviewList: [
       { user: "Jane", text: "Fixed our issues in no time!" },
@@ -44,8 +44,8 @@ export const professionals = [
     reviews: 95,
     experience: "12+ years experience",
     services: [
-      { name: "Furniture Making", rate: "$60/hr" },
-      { name: "Custom Shelving", rate: "$40/hr" },
+      { name: "Furniture Making", rate: "₹600/hr" },
+      { name: "Custom Shelving", rate: "₹400/hr" },
     ],
     reviewList: [
       { user: "Tom", text: "Craftsmanship is top notch." },
@@ -61,8 +61,8 @@ export const professionals = [
     reviews: 76,
     experience: "6+ years experience",
     services: [
-      { name: "Deep Cleaning", rate: "$25/hr" },
-      { name: "Window Cleaning", rate: "$20/hr" },
+      { name: "Deep Cleaning", rate: "₹205/hr" },
+      { name: "Window Cleaning", rate: "₹200/hr" },
     ],
     reviewList: [
       { user: "Rachel", text: "Left my place spotless!" },
@@ -78,8 +78,8 @@ export const professionals = [
     reviews: 130,
     experience: "9+ years experience",
     services: [
-      { name: "Engine Repair", rate: "$70/hr" },
-      { name: "Brake Service", rate: "$50/hr" },
+      { name: "Engine Repair", rate: "₹700/hr" },
+      { name: "Brake Service", rate: "₹500/hr" },
     ],
     reviewList: [
       { user: "James", text: "Got my car back in perfect shape!" },
@@ -95,8 +95,8 @@ export const professionals = [
     reviews: 60,
     experience: "5+ years experience",
     services: [
-      { name: "Lawn Maintenance", rate: "$30/hr" },
-      { name: "Planting & Trimming", rate: "$25/hr" },
+      { name: "Lawn Maintenance", rate: "₹300/hr" },
+      { name: "Planting & Trimming", rate: "₹205/hr" },
     ],
     reviewList: [
       { user: "Greg", text: "Beautiful results every time!" },
@@ -112,8 +112,8 @@ export const professionals = [
     reviews: 105,
     experience: "11+ years experience",
     services: [
-      { name: "Interior Painting", rate: "$40/hr" },
-      { name: "Exterior Painting", rate: "$50/hr" },
+      { name: "Interior Painting", rate: "₹400/hr" },
+      { name: "Exterior Painting", rate: "₹500/hr" },
     ],
     reviewList: [
       { user: "Diane", text: "Smooth finish and no mess!" },
