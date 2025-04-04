@@ -10,15 +10,15 @@ import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
   const [formType, setFormType] = useState(null);
- const navigate = useNavigate();
+  const navigate = useNavigate();
   const handleOnClickaboutus = () => {
-    navigate("/about")
-  }
-  
+    navigate("/about");
+  };
+
   return (
     <div className="w-screen h-screen px-3 sm:px-8 md:px-16 lg:px-20 py-2 sm:py-12 lg:overflow-hidden overflow-auto relative">
       <NavBar setFormType={setFormType} />
-      
+
       {/* Background Elements */}
       <div
         className="fixed top-0 right-0 translate-x-12 z-[-1] hidden lg:block"
@@ -43,7 +43,9 @@ const LandingPage = () => {
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row  sm:mt-12 mt-6 ">
         {/* Left Section */}
-        <div className={`w-full lg:w-1/2 p-4 sm:p-8 md:p-12 lg:p-20 flex flex-col items-center lg:items-start `}>
+        <div
+          className={`w-full lg:w-1/2 p-4 sm:p-8 md:p-12 lg:p-20 flex flex-col items-center lg:items-start `}
+        >
           <ul className="space-y-3 mb-8 sm:mb-12 lg:mb-16">
             <li className="text-lg sm:text-xl font-bold text-gray-600 flex items-center">
               <img
@@ -71,12 +73,12 @@ const LandingPage = () => {
             </li>
           </ul>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
-          <button
-  onClick={handleOnClickaboutus}
-  className="bg-[#2e91e2] rounded-2xl w-full sm:w-[200px] py-3 text-center text-white text-base sm:text-lg font-medium font-['Poppins'] hover:bg-[#1a75c2] transition duration-200"
->
-  About us
-</button>
+            <button
+              onClick={handleOnClickaboutus}
+              className="bg-[#2e91e2] rounded-2xl w-full sm:w-[200px] py-3 text-center text-white text-base sm:text-lg font-medium font-['Poppins'] hover:bg-[#1a75c2] transition duration-200"
+            >
+              About us
+            </button>
 
             <button
               onClick={() => setFormType("login")}
@@ -88,33 +90,42 @@ const LandingPage = () => {
         </div>
 
         {/* Right Section */}
-        <div className={`w-full lg:w-1/2 flex ${ formType === "signup"? "h-[600px]":"h-[500px]"} justify-center relative overflow-hidden mt-6 lg:mt-0 `}>
-  <div
-    className={`w-full flex items-center justify-center transition-transform duration-700 ease-in-out ${formType ? "-translate-x-full" : "translate-x-0"}`}
-  >
-    <img src={loginbg} alt="Login Background" className="w-4/5 h-auto" />
-  </div>
+        <div
+          className={`w-full lg:w-1/2 flex ${
+            formType === "signup" ? "h-[600px]" : "h-[550px]"
+          } justify-center relative overflow-hidden mt-6 lg:mt-0 `}
+        >
+          <div
+            className={`w-full flex items-center justify-center transition-transform duration-700 ease-in-out ${
+              formType ? "-translate-x-full" : "translate-x-0"
+            }`}
+          >
+            <img
+              src={loginbg}
+              alt="Login Background"
+              className="w-4/5 h-auto"
+            />
+          </div>
 
-  <div
-              className={`absolute inset-0 flex justify-center items-center transition-all duration-500 ease-in-out ${
-                formType === "login"
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-full opacity-0"
-              }`}
-            >
-              <LoginForm />
-            </div>
-            <div
-              className={`absolute inset-0 flex justify-center items-center transition-all duration-500 ease-in-out ${
-                formType === "signup"
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-full opacity-0"
-              }`}
-            >
-              <SignupForm />
-            </div>
-</div>
-
+          <div
+            className={`absolute inset-0 flex justify-center items-center transition-all duration-500 ease-in-out ${
+              formType === "login"
+                ? "translate-x-0 opacity-100"
+                : "translate-x-full opacity-0"
+            }`}
+          >
+            <LoginForm />
+          </div>
+          <div
+            className={`absolute inset-0 flex justify-center items-center transition-all duration-500 ease-in-out ${
+              formType === "signup"
+                ? "translate-x-0 opacity-100"
+                : "translate-x-full opacity-0"
+            }`}
+          >
+            <SignupForm />
+          </div>
+        </div>
       </div>
     </div>
   );
